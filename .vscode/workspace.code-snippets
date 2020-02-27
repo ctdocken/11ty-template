@@ -1,0 +1,6 @@
+{
+    "Post Template": {
+        "prefix": "post",
+        "body": ["---\ntitle: POST_TITLE\ndate: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\ncategories:\n- \n---\n\n"]
+    }
+}

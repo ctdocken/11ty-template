@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}} | {{site.name}}</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href = "/static/styles/styles.css"/>
+    </head>
+    <body>
+        <header>
+            <nav class="logo-nav">
+                <a href="/">{{site.name}}<br/>
+                    <small>{{site.subtitle}}</small>
+                </a>
+            </nav>
+            <nav class="basic-nav">
+                <img class="menu-icon" src="/static/images/menu.svg">
+                <div class="popup-menu">
+                    <ul>
+                        {% for link in site.primaryNav %}
+                            <li>
+                                <a href="{{link.url}}">{{link.title}}<br/>
+                                    <small>{{link.subtitle}}</small>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <img class="menu-icon" src="/static/images/close.svg">
+                </div>
+            </nav>
+        </header>
+        <main>
+            {{content | safe}}
+
+            <!--
+            <div class="splash">
+                <p>Splash</p>
+            </div>
+
+            <div class="full-splash">
+                <div class="full-splash-container">
+                    <div class="full-splash-inner-container">
+                        <p>Full Splash</p>
+                    </div>
+                </div>
+                -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer-bio">
+            <div class="heading">{{site.author.fullName}}</div>
+            <div class="">{{site.author.biography}}</div>
+        </div>
+        <nav class="basic-nav">
+            <div class="heading">Navigation</div>
+            <ul>
+                {% for link in site.primaryNav %}
+                    <li>
+                        <a href="{{link.url}}">{{link.title}}<br/>
+                            <small>{{link.subtitle}}</small>
+                        </a>
+                    </li>
+                {% endfor %}
+            </nav>
+        </div>
+        <nav class="basic-nav">
+            <div class="heading">Social Media</div>
+            <ul>
+                {% for link in site.socialMedia %}
+                    <li>
+                        <a href="{{link.url}}">{{link.title}}<br/>
+                            <small>{{link.subtitle}}</small>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="copyright">Copyright © {{site.copyright.getFullYear()}}
+            {{site.name}}. All rights reserved.</div>
+    </footer>
+    <script type="text/javascript" src="/static/scripts/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One&display=swap');
+
+:root {
+    --main-bg-color: #f7fafb;
+    --main-primary-color: #ff3347;
+    --main-secondary-color: #03749c;
+    --main-text-color: #222529;
+    --main-faded-color: #66747e;
+
+    --main-mobile-breakpoint: 600px;
+
+    --main-max-width: 920px;
+    --main-normal-width: 600px;
+
+    --main-heading-font: 'Julius Sans One', sans-serif;
+    --main-base-font: 'Archivo Narrow', sans-serif;
+
+    --main-layout-padding: 1rem;
+}
+
+body {
+    max-width: var(--main-max-width);
+    margin: auto;
+    font-family: var(--main-base-font);
+    font-size: 18px;
+
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+    font-family: var(--main-heading-font);
+    letter-spacing: -0.3px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.heading {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 1.4;
+}
+
+a {
+    color: var(--main-primary-color);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: var(--main-layout-padding);
+    grid-gap: var(--main-layout-padding);
+}
+
+header a,
+.basic-nav a {
+    display: block;
+    line-height: 1;
+
+    font-weight: bold;
+    color: var(--main-primary-color);
+}
+
+header small,
+.basic-nav small {
+    color: var(--main-text-color);
+    font-weight: normal;
+}
+
+header nav {
+    align-self: center;
+}
+
+.logo-nav {
+    font-family: 'Sansita', sans-serif;
+    font-size: 1.25rem;
+}
+
+.basic-nav {
+    position: relative;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    padding: 8px;
+    max-width: none;
+}
+
+.popup-menu {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--main-bg-color);
+    visibility: hidden;
+
+    border: 1px solid var(--main-faded-color);
+
+    max-width: 320px;
+    white-space: nowrap;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.basic-nav ul {
+    list-style-type: none;
+    margin: auto 0;
+    padding: 0;
+    text-align: right;
+}
+
+.basic-nav li {
+    text-align: left;
+    margin: 0;
+}
+
+header .basic-nav li {
+    margin: 0.5rem;
+}
+
+footer .basic-nav li {
+    margin: 0.5rem 0;
+}
+
+main {
+    max-width: var(--main-normal-width);
+    margin: auto;
+    padding: var(--main-layout-padding);
+}
+
+@media screen and (min-width: 920px) {
+    .splash,
+    main img {
+        max-width: var(--main-max-width);
+        margin: 0 calc((var(--main-normal-width) - var(--main-max-width)) / 2 + var(--main-layout-padding));
+    }
+}
+
+@media screen and (min-width: 600px) {
+    /*
+    .full-splash {
+        width: 100vw;
+        margin: 0 calc(-50vw + (var(--main-normal-width) / 2));
+        background-color: red;
+    }
+
+    .full-splash-container {
+        margin: auto;
+        max-width: var(--main-max-width);
+        padding: 0 var(--main-layout-padding);
+    }
+
+    .full-splash-inner-container {
+        padding: 0 var(--main-layout-padding);
+    }
+    //*/
+}
+
+footer {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--main-layout-padding);
+    padding: var(--main-layout-padding);
+}
+
+.copyright {
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-bio,
+.copyright {
+    grid-column: 1 / 3;
+}
+
+@media screen and (min-width: 600px) {
+    footer {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .footer-bio {
+        grid-column: 1 / 1;
+    }
+
+    .copyright {
+        grid-column: 1 / 4;
+    }
+}
+
+.footer-bio .heading {
+    margin-bottom: 0.5rem;
+}
+
+/* Post Metadata */
+.article-title {
+    text-align: center;
+}
+
+.article-metadata {
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+    color: var(--main-faded-color);
+}
+
+.article-card {
+    border: var(--main-faded-color) 1px solid;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+
+    &__timestamp {
+        color: var(--main-faded-color);
+        font-size: 0.8rem;
+        font-weight: bold;
+        line-height: 0.9rem;
+    }
+}

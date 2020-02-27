@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="article-metadata">
+    {% if date %}
+        {{ date.toLocaleDateString("en-US", { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' }) }}
+    {% endif %}
+    {% if categories %}
+                 -
+        {{ categories.join(", ") }}
+    {% endif %}
+</div>
+
+<h1 class="article-title">{{ title }}</h1>
+
+{{ content | safe }}
