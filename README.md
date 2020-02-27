@@ -39,7 +39,8 @@ TODO: Cloudflare instructions
 
 ## Tips
 
-To open a markdown previewer is VS Code, use CMD+K V.
+-   To open a markdown previewer is VS Code, use CMD+K V.
+-   Markdown Cheatsheet: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 ### User-defined Code Snippets
 
