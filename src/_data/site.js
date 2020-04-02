@@ -1,5 +1,6 @@
 module.exports = {
     layout: 'layouts/default.njk',
+    url: 'https://www.example.com',
     name: '11ty Template',
     subtitle: 'A sample site using Eleventy',
     author: {
@@ -19,5 +20,7 @@ module.exports = {
         { title: 'Twitch', subtitle: '', url: '//www.twitch.tv' },
         { title: 'YouTube', subtitle: '', url: '//www.youtube.com' }
     ],
-    copyright: new Date()
+    copyright: new Date(),
+    lastMod: new Date(),
+    changeFreq: 'daily'
 };
