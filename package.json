@@ -19,10 +19,10 @@
     "homepage": "https://www.coreydocken.com",
     "devDependencies": {
         "@11ty/eleventy": "^0.10.0",
-        "@11ty/eleventy-plugin-rss": "^1.0.7",
-        "eleventy-plugin-sass": "^1.0.0",
+        "@11ty/eleventy-plugin-rss": "^1.0.9",
+        "eleventy-plugin-sass": "^1.1.1",
         "eslint": "^6.8.0",
-        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-prettier": "^3.1.4",
         "prettier": "1.19.1"
     },
     "eslintIgnore": [
