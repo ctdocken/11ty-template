@@ -1,6 +1,5 @@
 const Nunjucks = require('nunjucks');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const pluginSass = require('eleventy-plugin-sass');
 
 const articleCard = require('./plugins/article-card');
 
@@ -16,7 +15,6 @@ module.exports = function(config) {
     config.addLayoutAlias('default', 'layouts/index.njk');
 
     config.addPlugin(pluginRss);
-    config.addPlugin(pluginSass);
 
     config.addCollection('articles', function(collection) {
         return collection.getFilteredByGlob('./src/articles/*.*').filter(item => {
