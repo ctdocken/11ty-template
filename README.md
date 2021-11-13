@@ -4,7 +4,7 @@ Here's a starter template for 11ty with a few additions:
 
 -   Custom shortcode for a common article design.
 -   RSS plugin already installed
--   Sass plugin already installed
+-   ~~Sass plugin already installed~~
 -   GitHub Action to upload to S3
 -   GitHub Action to compress images when PRs are created.
 
@@ -44,7 +44,7 @@ TODO: Cloudflare instructions
 
 ### User-defined Code Snippets
 
-This project uses code snippets to generate templates for posts. Create a new post and type `post` and hit enter. Visual Studio Code will generate something that looks like the following (automatically filling in the date for you):
+This project uses code snippets to generate templates for posts. Create a new post, type `post`, hit CTRL+Space, then hit enter. Visual Studio Code will generate something that looks like the following (automatically filling in the date for you):
 
 ```
 ---

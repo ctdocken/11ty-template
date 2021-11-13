@@ -229,11 +229,11 @@ footer {
     border-radius: 3px;
     margin-bottom: 1rem;
     padding: 0.75rem;
+}
 
-    &__timestamp {
-        color: var(--main-faded-color);
-        font-size: 0.8rem;
-        font-weight: bold;
-        line-height: 0.9rem;
-    }
+.article-card__timestamp {
+    color: var(--main-faded-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 0.9rem;
 }
